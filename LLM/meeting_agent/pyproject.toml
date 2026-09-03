@@ -1,0 +1,13 @@
+[project]
+name = "meeting-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.141.1",
+    "uvicorn>=0.52.4",
+    "tortoise-orm>=0.22.0",
+    "aiosqlite>=0.20.0",
+    "pydantic-settings>=2.2.1",
+]
