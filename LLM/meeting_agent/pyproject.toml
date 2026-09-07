@@ -10,4 +10,6 @@ dependencies = [
     "tortoise-orm>=0.22.0",
     "aiosqlite>=0.20.0",
     "pydantic-settings>=2.2.1",
+    "bcrypt>=5.0.0",
+    "pyjwt>=2.13.0",
 ]

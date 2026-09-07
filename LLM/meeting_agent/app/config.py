@@ -15,4 +15,13 @@ class Settings(BaseSettings):
     ALI_ASR_APP_KEY: str = ""
     ALI_ASR_BASE_URL: str = ""
 
+    # JWT
+    JWT_SECRET_KEY: str = ""
+    JWT_ALGORITHM: str = "HS256"
+    JWT_EXPIRE_MINUTES: int = 30
+
 settings = Settings()
+
+# 启动期安全校验：未配置 JWT Secret 则拒绝启动
+if not settings.JWT_SECRET_KEY:
+    raise ValueError("JWT_SECRET_KEY 未在 .env 中配置，出于安全考虑，应用拒绝启动！")

@@ -3,12 +3,10 @@ from app.config import settings
 
 # 数据库配置信息
 TORTOISE_ORM = {
-    "connections": {
-        "default": settings.DB_URL
-    },
+    "connections": { "default": settings.DB_URL },
     "apps": {
         "models": {
-            "models": [],
+            "models": ["app.models"],  # 修改此处，让 Tortoise 扫描到 User
             "default_connection": "default",
         }
     }
